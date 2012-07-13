@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>APMPlayerFactory | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="../css/all.css" media="all" />
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)" />
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/%24.fn.apmplayer_ui.html">$<span class='break'> </span>.<span class='break'> </span>fn<span class='break'> </span>.<span class='break'> </span>apmplayer_ui</a></li>
+				
+					<li><a href="../symbols/APMPlayer.html">APMPlayer</a></li>
+				
+					<li><a href="../symbols/APMPlayerFactory.html">APMPlayerFactory</a></li>
+				
+					<li><a href="../symbols/CustomSchemes.html">CustomSchemes</a></li>
+				
+					<li><a href="../symbols/Debug.html">Debug</a></li>
+				
+					<li><a href="../symbols/Events.html">Events</a></li>
+				
+					<li><a href="../symbols/Playable.html">Playable</a></li>
+				
+					<li><a href="../symbols/PlaybackMechanism.html">PlaybackMechanism</a></li>
+				
+					<li><a href="../symbols/PlaybackState.html">PlaybackState</a></li>
+				
+					<li><a href="../symbols/Playlist.html">Playlist</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		<footer>
+			
+			Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+			Generated on:
+			<time datetime='2012-5-25' pubdate>2012-5-25 12:04</time>
+		</footer>
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+    <div class="innerContent">
+        <article>
+            <header>
+                <h1 class="classTitle">
+                    
+                    Class <span>APMPlayerFactory</span>
+                </h1>
+
+                <div class="intro">
+                    <p class="description summary">
+                        
+                    </p>
+
+                    
+                        <ul class="summary">
+                            
+<!--
+                            
+                                <li>Defined in: <a href="../symbols/src/script_apmplayer.js.html">apmplayer.js</a></li>
+                            
+                            -->
+                            
+                        </ul>
+                    
+                </div>
+            </header>
+
+            <!--
+            #### CONSTRUCTOR/Class Summary
+            -->
+
+            
+                <section>
+                    <div class="details props">
+                        <div class="innerProps">
+                            <h2 class="sectionTitle" id="constructor">
+                                Class Summary
+                            </h2>
+
+                            <div class="fixedFont">
+                                <b>APMPlayerFactory</b>()
+                            </div>
+
+                            <div class="description">
+                                factory pattern used to prohibit multiple copies of APMPlayer (singleton) + provides access to Playlist and Playable creation
+                                
+                            </div>
+
+                            
+
+                            
+
+                            
+                        </div>
+                    </div>
+                </section>
+            
+
+            
+            <!--
+            #### METHODS SUMMARY
+            -->
+            
+                <section>
+                    
+
+                    <div class="props">
+                        <h2 class="sectionTitle">Method Summary</h2>
+
+                        
+                            <nav>
+                                <table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class APMPlayerFactory.">
+
+                                    <tbody>
+                                        
+
+                                        
+                                            <tr
+                                                 class='item0'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/APMPlayerFactory.html#.getCustomSchemes">getCustomSchemes</a></b>(params)
+                                                    </div>
+                                                    <div class="description">returns a CustomSchemes object to initialize the map of <a href="../symbols/CustomSchemes.html">CustomSchemes</a>, used as a short-cut for constructing <a href="../symbols/Playable.html">Playable</a> objects -- see <a href="../symbols/CustomSchemes.html">CustomSchemes</a> for more detail.</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item1'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/APMPlayerFactory.html#.getPlayable">getPlayable</a></b>(params)
+                                                    </div>
+                                                    <div class="description">validates params argument and constructs a new <a href="../symbols/Playable.html">Playable</a> object upon each call, if valid.</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item2'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/APMPlayerFactory.html#.getPlayer">getPlayer</a></b>()
+                                                    </div>
+                                                    <div class="description">returns singleton instance of <a href="../symbols/APMPlayer.html">APMPlayer</a>.</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item3'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/APMPlayerFactory.html#.getPlaylist">getPlaylist</a></b>()
+                                                    </div>
+                                                    <div class="description">constructs and returns a new <a href="../symbols/Playlist.html">Playlist</a>.</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </nav>
+                        
+
+            <!--
+                        
+                        -->
+                    </div>
+                </section>
+            
+
+    <!--
+    #### EVENTS SUMMARY
+    -->
+            
+
+    <!--
+    #### FIELD DETAILS
+    -->
+            
+
+
+            <!--
+            #### METHOD DETAILS
+            -->
+
+            
+                <section>
+                    <div class="details props">
+                        <div class="innerProps">
+                            <h2 class="sectionTitle">
+                                Method Detail
+                            </h2>
+
+                            <ul class="methodDetail" id="MethodDetail">
+                                
+                                
+                                    <li
+                                         class='item0'
+                                    >
+                                        <div class="fixedFont heading" id=".getCustomSchemes">
+
+                                            <span class="light">{<a href="../symbols/CustomSchemes.html">CustomSchemes</a>}</span>
+
+                                            <b>getCustomSchemes</b>(params)
+                                        </div>
+
+                                        <div class="description">
+                                            returns a CustomSchemes object to initialize the map of <a href="../symbols/CustomSchemes.html">CustomSchemes</a>, used as a short-cut for constructing <a href="../symbols/Playable.html">Playable</a> objects -- see <a href="../symbols/CustomSchemes.html">CustomSchemes</a> for more detail.
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+
+                                        
+                                            <dl class="detailList params">
+                                                <dt class="heading">Parameters:</dt>
+                                                
+                                                    <dt>
+                                                    </dt>
+                                                    <dd><span class="light fixedFont">{Object}</span> <b>params</b>
+                                                        object literal used to initialize <a href="../symbols/CustomSchemes.html">CustomSchemes</a> -- the object can contain any number of attributes already defined for <a href="../symbols/Playable.html">Playable</a> objects.</dd>
+                                                
+                                            </dl>
+                                        
+
+                                        
+
+                                        
+                                            <dl class="detailList nomargin">
+
+                                                
+
+                                                
+
+                                                
+
+                                                
+                                                    <dt class="heading">Returns:</dt>
+                                                    
+                                                        <dd><span class="light fixedFont">{<a href="../symbols/CustomSchemes.html">CustomSchemes</a>}</span> </dd>
+                                                    
+                                                
+
+                                                
+
+                                                
+
+                                            </dl>
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item1'
+                                    >
+                                        <div class="fixedFont heading" id=".getPlayable">
+
+                                            <span class="light">{<a href="../symbols/Playable.html">Playable</a>}</span>
+
+                                            <b>getPlayable</b>(params)
+                                        </div>
+
+                                        <div class="description">
+                                            validates params argument and constructs a new <a href="../symbols/Playable.html">Playable</a> object upon each call, if valid.  Returns an empty <a href="../symbols/Playable.html">Playable</a> if passed arguments are invalid.  see also <a href="../symbols/Playable.html#.isValid">Playable.isValid</a>
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">regular example:
+APMPlayerFactory.getPlayable(
+{
+  type: 'audio',
+  identifier: 'my_audio',
+  flash_server_url: 'rtmp://server/',
+  flash_file_path: 'mp3:path/file.mp3',
+  http_file_path: 'http://server/file.mp3',
+  buffer_time: 5
+});</pre>
+                                            
+                                                <pre class="code">CustomScheme example:
+APMPlayerFactory.getPlayable(
+{
+  identifier: 'apm_audio:/being/programs/2011/12/15/20111222_prophetic_imagination_128.mp3'
+});
+
+(note that in this example, the CustomScheme provides attributes that are pre-defined
+(eg, flash_server_url, flash_file_path, http_file_path, type, buffer_time)</pre>
+                                            
+                                        
+
+                                        
+                                            <dl class="detailList params">
+                                                <dt class="heading">Parameters:</dt>
+                                                
+                                                    <dt>
+                                                    </dt>
+                                                    <dd><span class="light fixedFont">{Object}</span> <b>params</b>
+                                                        object literal used to build Playable.</dd>
+                                                
+                                            </dl>
+                                        
+
+                                        
+
+                                        
+                                            <dl class="detailList nomargin">
+
+                                                
+
+                                                
+
+                                                
+
+                                                
+                                                    <dt class="heading">Returns:</dt>
+                                                    
+                                                        <dd><span class="light fixedFont">{<a href="../symbols/Playable.html">Playable</a>}</span> </dd>
+                                                    
+                                                
+
+                                                
+
+                                                
+
+                                            </dl>
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item2'
+                                    >
+                                        <div class="fixedFont heading" id=".getPlayer">
+
+                                            <span class="light">{<a href="../symbols/APMPlayer.html">APMPlayer</a>}</span>
+
+                                            <b>getPlayer</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            returns singleton instance of <a href="../symbols/APMPlayer.html">APMPlayer</a>.
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                            <dl class="detailList nomargin">
+
+                                                
+
+                                                
+
+                                                
+
+                                                
+                                                    <dt class="heading">Returns:</dt>
+                                                    
+                                                        <dd><span class="light fixedFont">{<a href="../symbols/APMPlayer.html">APMPlayer</a>}</span> </dd>
+                                                    
+                                                
+
+                                                
+
+                                                
+
+                                            </dl>
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item3'
+                                    >
+                                        <div class="fixedFont heading" id=".getPlaylist">
+
+                                            <span class="light">{<a href="../symbols/Playlist.html">Playlist</a>}</span>
+
+                                            <b>getPlaylist</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            constructs and returns a new <a href="../symbols/Playlist.html">Playlist</a>.
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                            <dl class="detailList nomargin">
+
+                                                
+
+                                                
+
+                                                
+
+                                                
+                                                    <dt class="heading">Returns:</dt>
+                                                    
+                                                        <dd><span class="light fixedFont">{<a href="../symbols/Playlist.html">Playlist</a>}</span> </dd>
+                                                    
+                                                
+
+                                                
+
+                                                
+
+                                            </dl>
+                                        
+                                        
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            
+
+            <!--
+            #### EVENT DETAILS
+            -->
+
+            
+        </article>
+    </div>
+</div>
+
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,308 @@
+<!---------------------------------------------------------------------------------
+ -
+ -   Copyright (c) 2012, American Public Media Group
+ -
+ -   All rights reserved.
+ -
+ -   Redistribution and use in source and binary forms, with or without
+ -   modification, are permitted provided that the following conditions are met:
+ -
+ -   * Redistributions of source code must retain the above copyright notice,
+ -     this list of conditions and the following disclaimer.
+ -
+ -   * Redistributions in binary form must reproduce the above copyright notice,
+ -     this list of conditions and the following disclaimer in the documentation
+ -     and/or other materials provided with the distribution.
+ -
+ -   * Neither the name of the American Public Media Group nor the names of
+ -     its contributors may be used to endorse or promote products derived from
+ -     this software without specific prior written permission.
+ -
+ -   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ -   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ -   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ -   ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ -   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ -   OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ -   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ -   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ -   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ -   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ -   POSSIBILITY OF SUCH DAMAGE.
+ -
+ --------------------------------------------------------------------------------->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>APM Media Player - Base player example</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.941176471, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- NOTE: the relative paths (eg '../../') are for demo purposes only
+         Normally this path should look something like
+         http://yourserver.org/media_player/skin/apmplayer_base.css -->
+
+    <!-- This is the base CSS theme for the APM Media Player -->
+    <link href="../../skin/apmplayer_base.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../skin/jquery-ui-slider.custom.css" type="text/css" media="all" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../script/lib/jquery-ui-slider.custom.min.js"></script>
+    <script type="text/javascript" src="../../script/lib/modernizr-2.5.3-custom.min.js"></script>
+    <script type="text/javascript" src="../../script/lib/soundmanager2-jsmin.js"></script>
+    <script type="text/javascript" src="../../script/apmplayer.js"></script>
+    <script type="text/javascript" src="../../script/apmplayer_ui.jquery.js"></script>
+    <!-- end NOTE -->
+
+    <!-- This script initializes the audio player, sets the intial volume and defines default player options -->
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('#apm_media_wrapper').apmplayer_ui({
+                playables : [
+                    {
+                        identifier: 'simple flash streaming version',
+                        type: 'audio',
+                        title: 'marketplace flash streaming example',
+                        program: 'Marketplace',
+                        flash_server_url  : 'rtmp://archivemedia.publicradio.org/music',
+                        flash_file_path : 'mp3:ondemand/marketplace/morning_report/2012/02/07/marketplace_morning_report1050_20120207_64.mp3',
+                        http_file_path : 'http://ondemand.publicradio.org/marketplace/morning_report/2012/02/07/marketplace_morning_report1050_20120207_64.mp3',
+                        duration: 482000
+                    },
+                    {
+                        identifier: 'simple mp3 podcast',
+                        type: 'audio',
+                        title: 'onBeing mp3 progressive download',
+                        program: 'on Being',
+                        http_file_path: 'http://download.publicradio.org/podcast/being/unheard_cuts/20120405_restoring_the_senses_uc_guroian.mp3',
+                        duration: 5903000
+                    },
+                    {
+                        identifier: 'typical',
+                        type : 'live_audio',
+                        title: 'AAC+ RTMP live streaming example',
+                        program: '89.3 the Current',
+                        flash_server_url : 'rtmp://archivemedia.publicradio.org/kcmp',
+                        flash_file_path : 'kcmp.stream',
+                        http_file_path : 'http://currentstream1.publicradio.org:80/',
+                        buffer_time : 6
+                    }
+                ],
+                onPlaylistUpdate : function (playable) {
+                    if ($('#apm_playlist li[ id = \'' + playable.identifier + '\']').length == 0) {   //create playlist item li + click handler if none exists.
+                        $('#apm_playlist ul').append('<li id="' + playable.identifier + '" class="apm_playlist_item"></li>');
+
+                        $('#apm_playlist li[ id = \'' + playable.identifier + '\']').click(function () {
+                            $('#apm_player_container').apmplayer_ui('gotoPlaylistItem', this.id);
+                        });
+                    }
+                    var snippet = '';
+                    if (playable.program !== '') {
+                        snippet += '<div class="apm_playlist_item_title">' + playable.program + '</div>';
+                    }
+                    if (playable.title !== '') {
+                         snippet += '<div class="apm_playlist_item_info">' + playable.title + '</div>';
+                    } else if (playable.description !== '') {
+                         snippet += '<div class="apm_playlist_item_info">' + playable.description + '</div>';
+                    }
+
+                    $('#apm_playlist li[ id = \'' + playable.identifier + '\']').html(snippet);
+
+                },
+                onMetadata : function (playable) {
+                    if (playable.image_lg !== ''
+                            && playable.image_sm !== '') {
+                        $('#apm_player_info').html('');
+                        $('#apm_player_container').css('background-size', '100%');
+                        $('#apm_player_container').css('background-repeat', 'no-repeat');
+                        $('#apm_player_container').css('background-image', 'url('+playable.image_sm+')');
+                        $('.apmbackgroundsize #apm_player_container').css('background-image', 'url('+playable.image_lg+')');
+                    }
+                    else {
+
+                        var snippet = "<h4>APMPlayer 1.2 playlist demo</h4>";
+                        if (playable.program !== '') {
+                            snippet += "<h2>"+playable.program+"</h2>";
+                        }
+                        if (playable.title !== ''
+                            && playable.title.indexOf("null - American Public Media") === -1) {
+                            snippet += "<p>"+playable.title+"</p>";
+                        }
+                        $('#apm_player_container').css('background-image', '');
+                        $('#apm_player_info').html(snippet);
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body id="apm_media_player">
+<!-- Prompt IE 6,7 users to install Chrome Frame. -->
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<!-- End demo -->
+    <div id="apm_media_wrapper" class="clearfix preroll-inactive">
+
+        <div id="apm_header">
+
+            <div id="apm_logo" class="hide-text">
+                <h1>
+                    <a href="http://americanpublicmedia.org" class="focusable" target="_blank">
+                        American Public Media
+                    </a>
+                </h1>
+            </div>
+
+            <div id="apm_nav" class="clearfix">
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#" class="donate">Donate</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+<!-- BEGIN Player Container: Contains current track's meta info and player control interface -->
+        <div id="apm_player_status" class="rounded box"></div>
+
+        <div id="apm_player_container" class="rounded box clearfix">
+
+            <div id="apm_player_info">
+
+                <h4>APMPlayer 1.2 playlist demo</h4>
+
+            </div>
+
+            <div id="apm_sponsor_overlay" class="rounded transition">
+                <img src="http://placehold.it/300x250">
+
+                <div id="apm_sponsor_overlay_info" class="rounded">
+                    <span id="apm_sponsor_overlay_time"></span>
+                </div>
+            </div>
+
+            <div id="apm_player_controls" class="volume playtime">
+
+                <div id="apm_player_toggle">
+
+                    <div id="apm_player_play" class="player-toggle hide-text">
+                        Play
+                    </div>
+
+                    <div id="apm_player_pause" class="player-toggle hide-text">
+                        Pause
+                    </div>
+
+
+                    <div id="apm_player_bar_wrapper">
+                        <div id="apm_player_bar_container" class="rounded">
+
+                            <div id="apm_player_bar">
+
+                                <div id="apm_player_loading" class="rounded4"></div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="apm_player_playtime">0:00</div>
+
+
+                    </div>
+
+                    <div id="apm_player_volume_wrapper">
+
+                        <div id="apm_player_volume_status">
+
+                        </div>
+
+                        <div id="apm_player_volume_slider_wrapper">
+
+                            <div id="apm_player_volume_slider_container" class="rounded">
+
+                                <div id="apm_volume_bar">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- END Player Container -->
+
+        <div id="apm_playlist_container" class="rounded box clearfix">
+
+            <div id="apm_playlist">
+
+                <h4>Playlist</h4>
+
+                <ul>
+
+                </ul>
+
+            </div>
+
+            <div id="apm_promo">
+
+            </div>
+
+        </div>
+
+        <div id="apm_sharing_tools" class="box rounded clearfix tabbed">
+
+            <ul id="apm_sharing_tab_controls">
+                <li><a href="#apm_sharing_share">Share <img src="../../skin/icons/share.png"></a></li>
+                <li><a href="#apm_sharing_download">Download <img src="../../skin/icons/download.png"></a></li>
+                <li><a href="#apm_sharing_embed">Embed <img src="../../skin/icons/embed.png"></a></li>
+                <li><a href="#apm_sharing_link">Link <img src="../../skin/icons/link.png"></a></li>
+            </ul>
+            <div id="apm_sharing_share" class="apm_sharing_tab">sharing info here</div>
+            <div id="apm_sharing_download" class="apm_sharing_tab"></div>
+            <div id="apm_sharing_embed" class="apm_sharing_tab">embed code goes here</div>
+            <div id="apm_sharing_link" class="apm_sharing_tab">sharing link here</div>
+
+        </div>
+
+        <div id="apm_ext">
+
+            <div id="apm_sponsor" class="rounded box transition">
+                <h4>Sponsor</h4>
+                <img src="http://placekitten.com/600/200">
+            </div>
+
+        </div>
+
+        <div id="apm_footer" class="clearfix">
+            <p>&copy; 2012 American Public Media</p>
+        </div>
+
+        <div id="test" class="clearfix">
+            <button id="test-overlay" onclick="$('#apm_media_wrapper').toggleClass('preroll-inactive preroll-active');">Overlay</button>
+            <button id="test-volume" onclick="$('#apm_player_controls').toggleClass('no-volume volume');">Volume</button>
+            <button id="test-playtime" onclick="$('#apm_player_controls').toggleClass('no-playtime playtime');">Playtime</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

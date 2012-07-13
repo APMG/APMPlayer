@@ -1,0 +1,95 @@
+/*********************************************************************************
+ *
+ *   Copyright (c) 2012, American Public Media Group
+ *
+ *   All rights reserved.
+ *
+ *   Redistribution and use in source and binary forms, with or without
+ *   modification, are permitted provided that the following conditions are met:
+ *
+ *   - Redistributions of source code must retain the above copyright notice,
+ *     this list of conditions and the following disclaimer.
+ *
+ *   - Redistributions in binary form must reproduce the above copyright notice,
+ *     this list of conditions and the following disclaimer in the documentation
+ *     and/or other materials provided with the distribution.
+ *
+ *   - Neither the name of the American Public Media Group nor the names of
+ *     its contributors may be used to endorse or promote products derived from
+ *     this software without specific prior written permission.
+ *
+ *   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ *   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ *   ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ *   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ *   OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ *   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ *   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ *   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ *   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ *   POSSIBILITY OF SUCH DAMAGE.
+ *
+ **********************************************************************************/
+#apm_media_player {
+    background-color: #eee;
+    background: url('http://performancetoday.publicradio.org/standard/images/pft001/body_background.gif') repeat-x;
+    border-top-color: #90B8A8;
+}
+
+#apm_media_player a {
+    color: #2F916A;
+}
+
+#apm_media_player a.donate {
+    color: red;
+}
+
+#apm_logo {
+    background: url('logo.png') top left no-repeat;
+    background-size: 100%;
+}
+
+/*** Retina display images ***/
+.apmbackgroundsize #apm_logo {
+    background: url('logo@2x.png') top left no-repeat;
+    background-size: 100%;
+}
+@media only screen and (max-width: 720px) {
+    #apm_logo {
+        background: url('logo@2x.png') top left no-repeat;
+    }
+}
+
+.apm_playlist_item:hover .apm_playlist_item_title {
+    color: #2F916A;
+}
+
+#apm_player_bar.buffering, #apm_player_bar.loading {
+    background: url('sprite.png') -10px -150px;
+}
+
+#apm_player_bar .ui-widget-header {
+    background: url('sprite.png') -10px -115px;
+}
+
+#apm_volume_bar .ui-widget-header {
+    background: #2F916A;
+    border: 1px solid #2F916A;
+    border-top-color: #5BC49B;
+    border-bottom-color: #37775E;
+    width: 8px;
+}
+
+#apm_sharing_tools {
+}
+
+#apm_sharing_twitter {
+    width: 100px;
+}
+
+#apm_sharing_facebook {
+    width: 300px;
+    margin-left: -10px;
+    float: left;
+}

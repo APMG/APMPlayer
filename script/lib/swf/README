@@ -1,0 +1,3 @@
+when updating soundmanger, you must copy the x-domain safe versions of the swf files here in order for all players to work.
+
+-extract soundmanager2_flash_xdomain.zip in swf directory and place in script/lib/swf location.

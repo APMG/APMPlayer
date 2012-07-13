@@ -1,0 +1,202 @@
+<!---------------------------------------------------------------------------------
+ -
+ -   Copyright (c) 2012, American Public Media Group
+ -
+ -   All rights reserved.
+ -
+ -   Redistribution and use in source and binary forms, with or without
+ -   modification, are permitted provided that the following conditions are met:
+ -
+ -   * Redistributions of source code must retain the above copyright notice,
+ -     this list of conditions and the following disclaimer.
+ -
+ -   * Redistributions in binary form must reproduce the above copyright notice,
+ -     this list of conditions and the following disclaimer in the documentation
+ -     and/or other materials provided with the distribution.
+ -
+ -   * Neither the name of the American Public Media Group nor the names of
+ -     its contributors may be used to endorse or promote products derived from
+ -     this software without specific prior written permission.
+ -
+ -   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ -   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ -   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ -   ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ -   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ -   OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ -   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ -   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ -   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ -   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ -   POSSIBILITY OF SUCH DAMAGE.
+ -
+ --------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>APMPlayer Test Suite: $.fn.apmplayer_ui</title>
+        <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-git.css" type="text/css" media="screen">
+        <script type="text/javascript" src="http://code.jquery.com/qunit/qunit-git.js"></script>
+
+        <!-- bring in dependent libs to test -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../script/lib/jquery-ui-slider.custom.min.js"></script>
+        <script type="text/javascript" src="../script/lib/modernizr-2.5.3-custom.min.js"></script>
+        <script type="text/javascript" src="../script/lib/soundmanager2-jsmin.js"></script>
+        <script type="text/javascript" src="../script/apmplayer.js"></script>
+        <script type="text/javascript" src="../script/apmplayer_ui.jquery.js"></script>
+        <!-- end bring in dependent libs to test -->
+
+        <script type="text/javascript" src="setup/apmplayer-test-setup.js"></script>
+        <script type="text/javascript">
+            //at most basic level, need to init apmplayer_ui w basic parameters
+            $('#apm_media_wrapper').apmplayer_ui({
+                settings : {
+                    fetchMetadata : true
+                }
+            });
+        </script>
+        <script type="text/javascript" src="script/apmplayer_ui-test.js"></script>
+    </head>
+    <body>
+        <h1 id="qunit-header">$.fn.apmplayer_ui tests</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+        <div id="qunit-fixture"></div>
+
+        <div id="apm_media_wrapper" class="clearfix preroll-inactive">
+
+            <div id="apm_header">
+
+                <div id="apm_logo" class="hide-text">
+                </div>
+
+                <div id="apm_nav" class="clearfix">
+                    <ul>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div id="apm_player_status" class="rounded box"></div>
+
+            <div id="apm_player_container" class="rounded box clearfix">
+
+                <div id="apm_player_info">
+                </div>
+
+                <div id="apm_sponsor_overlay" class="rounded transition">
+
+                    <div id="apm_sponsor_overlay_info" class="rounded">
+                        <span id="apm_sponsor_overlay_time"></span>
+                    </div>
+                </div>
+
+                <div id="apm_player_controls" class="volume playtime">
+
+                    <div id="apm_player_toggle">
+
+                        <div id="apm_player_play" class="player-toggle hide-text">
+
+                        </div>
+
+                        <div id="apm_player_pause" class="player-toggle hide-text">
+
+                        </div>
+
+
+                        <div id="apm_player_bar_wrapper">
+                            <div id="apm_player_bar_container" class="rounded">
+
+                                <div id="apm_player_bar">
+
+                                    <div id="apm_player_loading" class="rounded4"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div id="apm_player_playtime"></div>
+
+
+                        </div>
+
+                        <div id="apm_player_volume_wrapper">
+
+                            <div id="apm_player_volume_status">
+
+                            </div>
+
+                            <div id="apm_player_volume_slider_wrapper">
+
+                                <div id="apm_player_volume_slider_container" class="rounded">
+
+                                    <div id="apm_volume_bar">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- END Player Container -->
+
+            <div id="apm_playlist_container" class="rounded box clearfix">
+
+                <div id="apm_playlist">
+
+                    <ul>
+
+                    </ul>
+
+                </div>
+
+                <div id="apm_promo">
+
+                </div>
+
+            </div>
+
+            <div id="apm_sharing_tools" class="box rounded clearfix tabbed">
+
+                <ul id="apm_sharing_tab_controls">
+    <!--
+                    <li><a href="#apm_sharing_share"></a></li>
+                    <li><a href="#apm_sharing_download"></a></li>
+                    <li><a href="#apm_sharing_embed"></a></li>
+                    <li><a href="#apm_sharing_link"></a></li>
+    -->
+                </ul>
+                <div id="apm_sharing_share" class="apm_sharing_tab">
+                </div>
+                <div id="apm_sharing_download" class="apm_sharing_tab"></div>
+                <div id="apm_sharing_embed" class="apm_sharing_tab"></div>
+                <div id="apm_sharing_link" class="apm_sharing_tab"></div>
+
+            </div>
+
+            <div id="apm_ext">
+
+                <div id="apm_sponsor" class="rounded box transition">
+
+                </div>
+
+            </div>
+
+            <div id="apm_footer" class="clearfix">
+            </div>
+
+        </div>
+
+    </body>
+</html>

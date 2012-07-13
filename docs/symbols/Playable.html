@@ -1,0 +1,1238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>Playable | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="../css/all.css" media="all" />
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)" />
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="index">
+	<div class="menu">
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav>
+			<ul class="classList" id="ClassList">
+				
+					<li><a href="../symbols/%24.fn.apmplayer_ui.html">$<span class='break'> </span>.<span class='break'> </span>fn<span class='break'> </span>.<span class='break'> </span>apmplayer_ui</a></li>
+				
+					<li><a href="../symbols/APMPlayer.html">APMPlayer</a></li>
+				
+					<li><a href="../symbols/APMPlayerFactory.html">APMPlayerFactory</a></li>
+				
+					<li><a href="../symbols/CustomSchemes.html">CustomSchemes</a></li>
+				
+					<li><a href="../symbols/Debug.html">Debug</a></li>
+				
+					<li><a href="../symbols/Events.html">Events</a></li>
+				
+					<li><a href="../symbols/Playable.html">Playable</a></li>
+				
+					<li><a href="../symbols/PlaybackMechanism.html">PlaybackMechanism</a></li>
+				
+					<li><a href="../symbols/PlaybackState.html">PlaybackState</a></li>
+				
+					<li><a href="../symbols/Playlist.html">Playlist</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		<footer>
+			
+			Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0<br />
+			Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+			Generated on:
+			<time datetime='2012-5-25' pubdate>2012-5-25 12:04</time>
+		</footer>
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+    <div class="innerContent">
+        <article>
+            <header>
+                <h1 class="classTitle">
+                    
+                    Class <span>Playable</span>
+                </h1>
+
+                <div class="intro">
+                    <p class="description summary">
+                        
+                    </p>
+
+                    
+                        <ul class="summary">
+                            
+<!--
+                            
+                                <li>Defined in: <a href="../symbols/src/script_apmplayer.js.html">apmplayer.js</a></li>
+                            
+                            -->
+                            
+                        </ul>
+                    
+                </div>
+            </header>
+
+            <!--
+            #### CONSTRUCTOR/Class Summary
+            -->
+
+            
+                <section>
+                    <div class="details props">
+                        <div class="innerProps">
+                            <h2 class="sectionTitle" id="constructor">
+                                Class Summary
+                            </h2>
+
+                            <div class="fixedFont">
+                                <b>Playable</b>(params)
+                            </div>
+
+                            <div class="description">
+                                holds all specific information about each media item to be played in APMPlayer -- To play audio/video in APMPlayer, the creation of a valid Playable is first required.
+to create a playable, see <a href="../symbols/APMPlayerFactory.html#.getPlayable">APMPlayerFactory.getPlayable</a>.  Also holds complete metadata for a single playable.
+                                
+                            </div>
+
+                            
+
+                            
+                                <dl class="detailList params">
+                                    <dt class="heading">Parameters:</dt>
+                                    
+                                        <dt>
+                                            <span class="light fixedFont">{Object}</span>  <b>params</b>
+                                            
+                                        </dt>
+                                        <dd>object literal used to create a Playable object -- each of the passed object's attributes needs to match a particular item in Field Detail to be included w/ the Playable.
+note that the indentifier is the only required field for APM-specific audio.. However for basic playables (non-APM), type is also required.</dd>
+                                    
+                                </dl>
+                            
+
+                            
+                        </div>
+                    </div>
+                </section>
+            
+
+            
+                
+                <section>
+                    
+                        <nav>
+                            <div class="props">
+                                <table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class Playable.">
+                                    <caption class="sectionTitle">Field Summary</caption>
+
+                                    <tbody>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#identifier">identifier</a></b>
+                                                    </div>
+                                                    <div class="description">[REQUIRED] the ID for the playable (must be unique when creating a playlist).</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#type">type</a></b>
+                                                    </div>
+                                                    <div class="description">[REQUIRED] either 'audio' or 'live_audio' -- Note that this is typically set automatically when using a CustomScheme</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#flash_server_url">flash_server_url</a></b>
+                                                    </div>
+                                                    <div class="description">server url to connect to to stream flash (eg  rtmp://archivemedia.publicradio.org/)</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#flash_file_path">flash_file_path</a></b>
+                                                    </div>
+                                                    <div class="description">file to play over flash_server_url (eg  'mp3:filename_64.mp3')</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#http_file_path">http_file_path</a></b>
+                                                    </div>
+                                                    <div class="description">used for HTML5 audio playback (eg  http://ondemand.publicradio.org/filename.mp3) -OR- progressive download pseudo HTML5 playback via flash.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#title">title</a></b>
+                                                    </div>
+                                                    <div class="description">optional metadata field.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#description">description</a></b>
+                                                    </div>
+                                                    <div class="description">optional metadata field.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#detail">detail</a></b>
+                                                    </div>
+                                                    <div class="description">optional metadata field.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#program">program</a></b>
+                                                    </div>
+                                                    <div class="description">optional metadata field.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#host">host</a></b>
+                                                    </div>
+                                                    <div class="description">optional metadata field.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#date">date</a></b>
+                                                    </div>
+                                                    <div class="description">optional metadata field.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#image_sm">image_sm</a></b>
+                                                    </div>
+                                                    <div class="description">image associated w/ playable (eg used to display in info window when playable plays) -- a small and large were necessary to deal w/ re-sizing issues in IE 7,8</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#image_lg">image_lg</a></b>
+                                                    </div>
+                                                    <div class="description">image associated w/ playable (eg used to display in info window when playable plays)</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#downloadable">downloadable</a></b>
+                                                    </div>
+                                                    <div class="description">(default true) flag to permit the file to be downloaded.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#buffer_time">buffer_time</a></b>
+                                                    </div>
+                                                    <div class="description">amount of time (in seconds) the player should buffer -- default = 3.</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#duration">duration</a></b>
+                                                    </div>
+                                                    <div class="description">the length, in miliseconds of this Playable</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#position">position</a></b>
+                                                    </div>
+                                                    <div class="description">the current position, in miliseconds for the Playable</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#percent_played">percent_played</a></b>
+                                                    </div>
+                                                    <div class="description">percentage of the playable that's been played (position/duration)</div>
+                                                </td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td class="nameDescription">
+                                                    <div class="fixedFont">
+                                                    <b><a href="../symbols/Playable.html#percent_loaded">percent_loaded</a></b>
+                                                    </div>
+                                                    <div class="description">percentage of the playable that's been loaded (percent of total duration)</div>
+                                                </td>
+                                            </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </nav>
+                    
+<!--
+                    
+                    -->
+                </section>
+            
+            <!--
+            #### METHODS SUMMARY
+            -->
+            
+                <section>
+                    
+
+                    <div class="props">
+                        <h2 class="sectionTitle">Method Summary</h2>
+
+                        
+                            <nav>
+                                <table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class Playable.">
+
+                                    <tbody>
+                                        
+
+                                        
+                                            <tr
+                                                 class='item0'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/Playable.html#.clearFlashProperties">clearFlashProperties</a></b>()
+                                                    </div>
+                                                    <div class="description">removes the flash_server_url + flash_file_path
+so that only the progressive http mechanism is possible.</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item1'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/Playable.html#.isCustomScheme">isCustomScheme</a></b>()
+                                                    </div>
+                                                    <div class="description">a Playable isCustomScheme if it has an identifier that matches one of the custom schemes defined</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item2'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/Playable.html#.isEOF">isEOF</a></b>()
+                                                    </div>
+                                                    <div class="description">a Playable is at the end of the file, return true.</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item3'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/Playable.html#.isFlashStreamable">isFlashStreamable</a></b>()
+                                                    </div>
+                                                    <div class="description">returns whether or not flash_server_url + flash_file_path is avail.</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item4'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/Playable.html#.isValid">isValid</a></b>()
+                                                    </div>
+                                                    <div class="description">a Playable isValid if it has an identifier and its type matches one of the valid MediaTypes (either 'audio' or 'live_audio')</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item5'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/Playable.html#.reset">reset</a></b>()
+                                                    </div>
+                                                    <div class="description">resets playable's position, percent_played, and percent_loaded back to 0</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item6'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/Playable.html#.setEmptyMembers">setEmptyMembers</a></b>()
+                                                    </div>
+                                                    <div class="description">finds and sets any provided members that are either '', 0, or null -- nothing will be set if passed params are empty or null</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <tr
+                                                 class='item7'
+                                            >
+                                                <td class="nameDescription">
+                                                    <b><a href="../symbols/Playable.html#.setMembers">setMembers</a></b>()
+                                                    </div>
+                                                    <div class="description">finds and sets any valid key, value pair-- will override anything that currently exists in that field.</div>
+                                                </td>
+
+                                            </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </nav>
+                        
+
+            <!--
+                        
+                        -->
+                    </div>
+                </section>
+            
+
+    <!--
+    #### EVENTS SUMMARY
+    -->
+            
+
+    <!--
+    #### FIELD DETAILS
+    -->
+            
+                <section>
+                    <div class="details props">
+                        <div class="innerProps">
+                            <h2 class="sectionTitle">
+                                Field Detail
+                            </h2>
+
+                            
+                                <div class="fixedFont heading" id="identifier">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>identifier</b>
+                                </div>
+
+                                <div class="description">
+                                    [REQUIRED] the ID for the playable (must be unique when creating a playlist).  Note that this is really the only required field when creating an APM-specific Playable.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="type">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>type</b>
+                                </div>
+
+                                <div class="description">
+                                    [REQUIRED] either 'audio' or 'live_audio' -- Note that this is typically set automatically when using a CustomScheme
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="flash_server_url">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>flash_server_url</b>
+                                </div>
+
+                                <div class="description">
+                                    server url to connect to to stream flash (eg  rtmp://archivemedia.publicradio.org/)
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="flash_file_path">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>flash_file_path</b>
+                                </div>
+
+                                <div class="description">
+                                    file to play over flash_server_url (eg  'mp3:filename_64.mp3')
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="http_file_path">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>http_file_path</b>
+                                </div>
+
+                                <div class="description">
+                                    used for HTML5 audio playback (eg  http://ondemand.publicradio.org/filename.mp3) -OR- progressive download pseudo HTML5 playback via flash.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="title">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>title</b>
+                                </div>
+
+                                <div class="description">
+                                    optional metadata field.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="description">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>description</b>
+                                </div>
+
+                                <div class="description">
+                                    optional metadata field.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="detail">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>detail</b>
+                                </div>
+
+                                <div class="description">
+                                    optional metadata field.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="program">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>program</b>
+                                </div>
+
+                                <div class="description">
+                                    optional metadata field.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="host">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>host</b>
+                                </div>
+
+                                <div class="description">
+                                    optional metadata field.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="date">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>date</b>
+                                </div>
+
+                                <div class="description">
+                                    optional metadata field.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="image_sm">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>image_sm</b>
+                                </div>
+
+                                <div class="description">
+                                    image associated w/ playable (eg used to display in info window when playable plays) -- a small and large were necessary to deal w/ re-sizing issues in IE 7,8
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="image_lg">
+
+
+                                    <span class="light">{string}</span>
+
+                                    <b>image_lg</b>
+                                </div>
+
+                                <div class="description">
+                                    image associated w/ playable (eg used to display in info window when playable plays)
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="downloadable">
+
+
+                                    <span class="light">{boolean}</span>
+
+                                    <b>downloadable</b>
+                                </div>
+
+                                <div class="description">
+                                    (default true) flag to permit the file to be downloaded.  Shows download option and/or presents the file for download if no suitable <a href="../symbols/PlaybackMechanism.html">PlaybackMechanism</a> is present.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="buffer_time">
+
+
+                                    <span class="light">{number}</span>
+
+                                    <b>buffer_time</b>
+                                </div>
+
+                                <div class="description">
+                                    amount of time (in seconds) the player should buffer -- default = 3.
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="duration">
+
+
+                                    <span class="light">{number}</span>
+
+                                    <b>duration</b>
+                                </div>
+
+                                <div class="description">
+                                    the length, in miliseconds of this Playable
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="position">
+
+
+                                    <span class="light">{number}</span>
+
+                                    <b>position</b>
+                                </div>
+
+                                <div class="description">
+                                    the current position, in miliseconds for the Playable
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="percent_played">
+
+
+                                    <span class="light">{number}</span>
+
+                                    <b>percent_played</b>
+                                </div>
+
+                                <div class="description">
+                                    percentage of the playable that's been played (position/duration)
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                <div class="hr"></div>
+                            
+                                <div class="fixedFont heading" id="percent_loaded">
+
+
+                                    <span class="light">{number}</span>
+
+                                    <b>percent_loaded</b>
+                                </div>
+
+                                <div class="description">
+                                    percentage of the playable that's been loaded (percent of total duration)
+                                    
+
+                                    
+                                </div>
+
+                                
+                                    
+
+                                
+                            
+                        </div>
+                    </div>
+                </section>
+            
+
+
+            <!--
+            #### METHOD DETAILS
+            -->
+
+            
+                <section>
+                    <div class="details props">
+                        <div class="innerProps">
+                            <h2 class="sectionTitle">
+                                Method Detail
+                            </h2>
+
+                            <ul class="methodDetail" id="MethodDetail">
+                                
+                                
+                                    <li
+                                         class='item0'
+                                    >
+                                        <div class="fixedFont heading" id=".clearFlashProperties">
+
+                                            
+
+                                            <b>clearFlashProperties</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            removes the flash_server_url + flash_file_path
+so that only the progressive http mechanism is possible.
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">playable.clearFlashProperties()</pre>
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item1'
+                                    >
+                                        <div class="fixedFont heading" id=".isCustomScheme">
+
+                                            <span class="light">{boolean}</span>
+
+                                            <b>isCustomScheme</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            a Playable isCustomScheme if it has an identifier that matches one of the custom schemes defined
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">playable.isCustomScheme('scheme_name')</pre>
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                            <dl class="detailList nomargin">
+
+                                                
+
+                                                
+
+                                                
+
+                                                
+                                                    <dt class="heading">Returns:</dt>
+                                                    
+                                                        <dd><span class="light fixedFont">{boolean}</span> true or false</dd>
+                                                    
+                                                
+
+                                                
+
+                                                
+
+                                            </dl>
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item2'
+                                    >
+                                        <div class="fixedFont heading" id=".isEOF">
+
+                                            <span class="light">{boolean}</span>
+
+                                            <b>isEOF</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            a Playable is at the end of the file, return true.
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">playable.isEOF()</pre>
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                            <dl class="detailList nomargin">
+
+                                                
+
+                                                
+
+                                                
+
+                                                
+                                                    <dt class="heading">Returns:</dt>
+                                                    
+                                                        <dd><span class="light fixedFont">{boolean}</span> true or false</dd>
+                                                    
+                                                
+
+                                                
+
+                                                
+
+                                            </dl>
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item3'
+                                    >
+                                        <div class="fixedFont heading" id=".isFlashStreamable">
+
+                                            <span class="light">{boolean}</span>
+
+                                            <b>isFlashStreamable</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            returns whether or not flash_server_url + flash_file_path is avail.  used to allow/disallow seeking before item loads.
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">playable.isFlashStreamable()</pre>
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                            <dl class="detailList nomargin">
+
+                                                
+
+                                                
+
+                                                
+
+                                                
+                                                    <dt class="heading">Returns:</dt>
+                                                    
+                                                        <dd><span class="light fixedFont">{boolean}</span> true or false</dd>
+                                                    
+                                                
+
+                                                
+
+                                                
+
+                                            </dl>
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item4'
+                                    >
+                                        <div class="fixedFont heading" id=".isValid">
+
+                                            <span class="light">{boolean}</span>
+
+                                            <b>isValid</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            a Playable isValid if it has an identifier and its type matches one of the valid MediaTypes (either 'audio' or 'live_audio')
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">playable.isValid()</pre>
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                            <dl class="detailList nomargin">
+
+                                                
+
+                                                
+
+                                                
+
+                                                
+                                                    <dt class="heading">Returns:</dt>
+                                                    
+                                                        <dd><span class="light fixedFont">{boolean}</span> true or false</dd>
+                                                    
+                                                
+
+                                                
+
+                                                
+
+                                            </dl>
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item5'
+                                    >
+                                        <div class="fixedFont heading" id=".reset">
+
+                                            
+
+                                            <b>reset</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            resets playable's position, percent_played, and percent_loaded back to 0
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">playable.reset()</pre>
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item6'
+                                    >
+                                        <div class="fixedFont heading" id=".setEmptyMembers">
+
+                                            
+
+                                            <b>setEmptyMembers</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            finds and sets any provided members that are either '', 0, or null -- nothing will be set if passed params are empty or null
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">playable.setEmptyMembers({object})</pre>
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                        <div class="hr"></div>
+                                    </li>
+                                
+                                    <li
+                                         class='item7'
+                                    >
+                                        <div class="fixedFont heading" id=".setMembers">
+
+                                            
+
+                                            <b>setMembers</b>()
+                                        </div>
+
+                                        <div class="description">
+                                            finds and sets any valid key, value pair-- will override anything that currently exists in that field.
+
+                                            
+
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <pre class="code">playable.setMembers({object})</pre>
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        
+                                        
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            
+
+            <!--
+            #### EVENT DETAILS
+            -->
+
+            
+        </article>
+    </div>
+</div>
+
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+
