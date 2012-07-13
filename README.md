@@ -1,23 +1,26 @@
 APMPlayer
 =========
 
-APMPlayer is a modern javascript media player framework developed
-to be a single media player library API to serve all APMG audio content.
+APMPlayer is a javascript media player framework developed to be the single
+media playback API for all APMG audio content.
 
-APMPlayer supports both static audio and live audio streaming officially.
-The library also contains stubs to facilitate the addition of video playables
-in the future.
+APMPlayer supports both static audio and live audio streaming, however also
+contains stubs to facilitate the addition of video playables in the future.
 
-The library has been tested mostly with static MP3 audio playback, AAC+
+The library has been mostly tested  with static MP3 audio files, AAC+
 live streaming over RTMP, and MP3 live streaming over HTML5.  A variety of
 playback mechanisms are supported (flash streaming via RTMP, progressive download
-over flash, and HTML5 audio playback).  The player will automatically use the
-most optimal mechanism based on browser, plugins available, and files provided.
+over flash, and HTML5 audio playback). The player will automatically use
+the most optimal playback mechanism based on browser, plugins available,
+and files provided.
+
+The project includes a responsive front-end design, API documentation,
+a full unit test suite, and several example players.
 
 
 Required Dependencies
 ---------------------
-* JQuery -- tested and works with version 1.4 - 1.7
+* jQuery -- tested and works with version 1.4 - 1.7
 
 
 Included Dependencies
@@ -31,7 +34,7 @@ HTML5, as well as flash streaming mechanisms over RTMP.
 file: /script/lib/soundmanager2-jsmin.js
 file: /script/lib/swf/*
 
-* JQueryUI Slider -- main library used for scrubber and volume bar.
+* jQueryUI Slider -- main library used for scrubber and volume bar.
 file: /script/lib/jquery-ui-slider.custom.min.js
 
 * Modernizr -- backwards compatibility for non-HTML5 and CSS3 browsers.
@@ -56,8 +59,8 @@ Player functionality and display generally consists of these three major
 components:
 
 * APMPlayer_UI -- handles all of the display-related logic and provides
-the glue between HTML and APMPlayer.  This is a JQuery plugin or 'fn' and
-requires JQuery to work (see /docs + /examples)
+the glue between HTML and APMPlayer.  This is a jQuery plugin or 'fn' and
+requires jQuery to work (see /docs + /examples)
 
 * APMPlayer -- APMPlayer is a wrapper to SoundManager2 that handles
 playback based on supported Playable type (eg, audio; live_audio).  file:
