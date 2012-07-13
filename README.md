@@ -75,7 +75,6 @@ This version includes the soundManager2 V2.97a.20120527 release.  located in
 
 License: BSD-3
 --------------
-The application  and is licensed under
 APMPlayer was developed by American Public Media and is released under
 the BSD-3 license.  Please see the license.bp for acceptable boilerplates
 included in the headers of all files throughout the project.
