@@ -47,7 +47,7 @@ test("check is defined", function() {
 });
 
 //try increasing test interval
-asyncTest("test full static HTML5 playback functionality", 14, function() {
+asyncTest("test full static HTML5 playback functionality", 12, function() {
 
     var threeSecPlayable = APMPlayerFactory.getPlayable(APMPlayerTestSetup.get3secondAPMStaticAudioObj());
     APMPlayer.reset([ APMPlayer.mechanism.type.HTML5 ]);
@@ -99,7 +99,7 @@ asyncTest("test full static HTML5 playback functionality", 14, function() {
     var metadata_count = 0;
     APMPlayer.events.addListener(APMPlayer.events.type.METADATA, function (playable) {
         metadata_count += 1;
-        ok(true, 'METADATA event fired #' + metadata_count + " (expecting 2 total)");
+        ok(true, 'METADATA event fired #' + metadata_count + " (expecting 1 total)");
         deepEqual( threeSecPlayable, playable, 'METADATA: playables should exactly match' );
     });
 
