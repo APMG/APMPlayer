@@ -589,7 +589,7 @@ if (typeof APMPlayerFactory === 'undefined') {
                 return false;
             },
             parse : function (identifier) {
-                var pattern = '^(' + this.schemes.join('|') + '){1}(:/){1}([/\\w.-]+$)';
+                var pattern = '^(' + this.schemes.join('|') + '){1}(:/){1}([/\\w .-]+$)';
                 var regex =  new RegExp(pattern);
                 var result = identifier.match(regex);
 
