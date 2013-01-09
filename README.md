@@ -28,7 +28,7 @@ Included Dependencies
 All third party libraries can be found in directories starting with /lib,
 and are packaged as part of this release:
 
-* SoundManager2 -- V2.97a.20120916 is the current release bundled as part
+* SoundManager2 -- V2.97a.20130101 is the current release bundled as part
 of APMPlayer.  SoundManager2 handles all of the low-level playback,
 HTML5, as well as flash streaming mechanisms over RTMP.
 file: /script/lib/soundmanager2-jsmin.js
@@ -69,7 +69,7 @@ factory pattern which provides a singleton version of APMPlayer, a Playlist,
 a Playable creator, and a basic Underwriting module (see /docs)
 
 * SoundManager2 -- handles all of the lower-level playback capabilities.
-This version includes the soundManager2 V2.97a.20120916 release.  located in
+This version includes the soundManager2 V2.97a.20130101 release.  located in
 /script/lib/.
 
 
