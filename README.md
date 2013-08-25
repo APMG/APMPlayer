@@ -24,7 +24,7 @@ a full unit test suite, and several example players.
 Documentation
 -------------
 
-Full API docs available and included w/ library:
+Full API docs available ( also bundled w/ library under /docs/ ):
 http://common.publicradio.org/media_player/1.2/docs/
 
 
