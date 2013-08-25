@@ -1,8 +1,7 @@
 APMPlayer
 =========
 
-APMPlayer is a javascript media player framework developed to be the single
-media playback API for all APMG audio content.
+A javascript media player framework developed to be a single, extensible media playback API for streaming and static audio content.
 
 Description
 -----------
@@ -19,6 +18,11 @@ and files provided.
 
 The project includes a responsive front-end design, API documentation,
 a full unit test suite, and several example players.
+
+
+Example Player Demo
+-------------------
+http://common.publicradio.org/media_player/1.2/examples/basic_playlist/
 
 
 Documentation
