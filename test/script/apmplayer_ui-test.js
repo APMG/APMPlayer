@@ -48,7 +48,7 @@ test("check apmplayer_ui instantiated", function() {
 });
 
 
-asyncTest("addPlayable() + gotoPlaylistItem() ", 18, function() {
+asyncTest("addPlayable() + gotoPlaylistItem() ", 15, function() {
 
     var live_stream_playable = APMPlayerFactory.getPlayable(APMPlayerTestSetup.getKCMPLiveAudioObj());
 
@@ -56,10 +56,10 @@ asyncTest("addPlayable() + gotoPlaylistItem() ", 18, function() {
     APMPlayer.events.addListener(APMPlayer.events.type.UNLOADED, function () {
         unloaded_count += 1;
         if(unloaded_count === 1) {
-            ok(true, 'UNLOADED event fired #' + unloaded_count + " (expecting 3 total).  Play after live stream pause was requested (should trigger unload).");
+            ok(true, 'UNLOADED event fired #' + unloaded_count + " (expecting 2 total).  Play after live stream pause was requested (should trigger unload).");
             APMPlayer.play(live_stream_playable);
         } else {
-            ok(true, 'UNLOADED event fired #' + unloaded_count + " (expecting 3 total).");
+            ok(true, 'UNLOADED event fired #' + unloaded_count + " (expecting 2 total).");
         }
     });
 
@@ -133,11 +133,11 @@ asyncTest("addPlayable() + gotoPlaylistItem() ", 18, function() {
 
     setTimeout(function() {
         APMPlayer.unload();     //stop stream after 4 seconds of playing
-    }, 5000);
+    }, 4000);
 
     setTimeout(function() {
         start();
-    }, 6000);
+    }, 5000);
 
 });
 
