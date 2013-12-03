@@ -110,5 +110,5 @@ asyncTest("test full static flash playback functionality", 14, function() {
 
     setTimeout(function() {
         start();
-    }, 7000);
+    }, 10000);
 });
