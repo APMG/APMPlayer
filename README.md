@@ -34,7 +34,7 @@ http://common.publicradio.org/media_player/1.2/docs/
 
 Required Dependencies
 ---------------------
-* jQuery -- tested and works with version 1.4 - 1.7
+* jQuery -- tested and works with versions 1.4.* - 1.11.*
 
 
 Included Dependencies
