@@ -48,7 +48,7 @@ test("check apmplayer_ui instantiated", function() {
 });
 
 
-asyncTest("addPlayable() + gotoPlaylistItem() ", 15, function() {
+asyncTest("addPlayable() + gotoPlaylistItem() ", 16, function() {
 
     var live_stream_playable = APMPlayerFactory.getPlayable(APMPlayerTestSetup.getKCMPLiveAudioObj());
 
@@ -132,12 +132,12 @@ asyncTest("addPlayable() + gotoPlaylistItem() ", 15, function() {
     });
 
     setTimeout(function() {
-        APMPlayer.unload();     //stop stream after 4 seconds of playing
-    }, 4000);
+        APMPlayer.unload();     //stop stream after 2 seconds of playing
+    }, 3000);
 
     setTimeout(function() {
         start();
-    }, 5000);
+    }, 6000);
 
 });
 

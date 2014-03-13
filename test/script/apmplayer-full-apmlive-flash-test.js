@@ -110,10 +110,10 @@ asyncTest("test full live flash playback functionality", 13, function() {
     });
 
     setTimeout(function() {
-        APMPlayer.unload();     //stop stream after 4 seconds of playing
-    }, 4000);
+        APMPlayer.unload();     //stop stream after 5 seconds of playing
+    }, 8000);                   //test needed timeout increased to deal w/ embedded ad in stream
 
     setTimeout(function() {
         start();
-    }, 5000);
+    }, 12000);
 });
