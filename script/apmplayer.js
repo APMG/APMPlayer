@@ -1861,35 +1861,22 @@ var scheme_map = {
     },
     apm_live_audio : {
         mpr_news : {
-            flash_server_url : 'rtmp://archivemedia.publicradio.org/news',
+            flash_server_url : 'rtmp://wowza.stream.publicradio.org/news',
             flash_file_path : 'news.stream',
-            http_file_path : 'http://newsstream1.publicradio.org:80/',
+            http_file_path : 'http://nis.stream.publicradio.org/nis.mp3',
             buffer_time : 6,
             type : 'live_audio'
         },
         mpr_current : {
-            flash_server_url : 'rtmp://archivemedia.publicradio.org/kcmp',
+            flash_server_url : 'rtmp://wowza.stream.publicradio.org/kcmp',
             flash_file_path : 'kcmp.stream',
-            http_file_path : 'http://currentstream1.publicradio.org:80/',
-            buffer_time : 6,
-            type : 'live_audio'
-        },
-        csf : {
-            flash_server_url : 'rtmp://archivemedia.publicradio.org/csf',
-            flash_file_path : 'csf.stream',
-            http_file_path : 'http://204.93.222.85:80/csf-nopreroll',
-            buffer_time : 6,
-            type : 'live_audio'
-        },
-        wpbi : {
-            flash_server_url : 'rtmp://archivemedia.publicradio.org/wpbistream',
-            flash_file_path : 'wpbi.stream',
-            http_file_path : 'http://wpbistream1.lbdns-streamguys.com:80/wpbistream',
+            http_file_path : 'http://current.stream.publicradio.org/kcmp.mp3',
             buffer_time : 6,
             type : 'live_audio'
         }
     }
 };
+
 var custom_schemes = APMPlayerFactory.getCustomSchemes();
 custom_schemes.init(scheme_map);
 

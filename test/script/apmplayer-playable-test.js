@@ -34,21 +34,6 @@
 module("APMPlayerFactory::Playable", {
 });
 
-test("APM-specific live audio playable", function() {
-
-    var testObj = APMPlayerTestSetup.getCSFLiveAudioObj();
-    var playable = APMPlayerFactory.getPlayable(testObj);
-
-    strictEqual ( playable.flash_server_url, 'rtmp://archivemedia.publicradio.org/csf');
-    strictEqual ( playable.flash_file_path, 'csf.stream');
-    strictEqual ( playable.http_file_path, 'http://204.93.222.85:80/csf-nopreroll');
-    strictEqual ( playable.identifier, testObj.identifier );
-    strictEqual ( playable.title, testObj.title );
-    strictEqual ( playable.description, testObj.description );
-    strictEqual ( playable.buffer_time, 6 );  //buffer should be 6 for live audio
-});
-
-
 test("APM-specific static audio playable", function() {
 
     var testObj = APMPlayerTestSetup.getAPMStaticAudioObj();

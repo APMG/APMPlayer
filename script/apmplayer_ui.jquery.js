@@ -526,7 +526,6 @@
                 //the error output has been adjusted to reflect and offer better feedback.
                 var snippet = '<p>We\'re sorry, an error has occurred and your audio cannot be played at this time. <br /><br />Often, this error is a result of a poor or missing internet connection.  Please check your internet connection, then click play to resume.';
                 player_ui.controls.status.displayWarning(snippet);
-                player_ui.underwriting.removeOverlay();
             }
         };
 

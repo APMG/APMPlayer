@@ -34,9 +34,7 @@ http://common.publicradio.org/media_player/1.2/docs/
 
 Required Dependencies
 ---------------------
-* jQuery -- tested and works with most jquery versions (fully tested against 1.4 - 1.7)
-* Known Issue:  The slider / UI library is currently incompatible with jQuery versions > 1.8.   We are currently exploring potential fixes.
-
+* jQuery -- tested and works with nearly all versions of jQuery (fully tested against 1.4 - 1.11, 2.1)
 
 Included Dependencies
 ---------------------
@@ -50,7 +48,7 @@ file: /script/lib/soundmanager2-jsmin.js
 file: /script/lib/swf/*
 
 * jQueryUI Slider -- main library used for scrubber and volume bar.
-file: /script/lib/jquery-ui-slider.custom.min.js
+file: /script/lib/jquery-ui-slider-1.10.4.custom.min.js
 
 * Modernizr -- backwards compatibility for non-HTML5 and CSS3 browsers.
 file: /script/lib/modernizr-2.5.3-custom.min.js

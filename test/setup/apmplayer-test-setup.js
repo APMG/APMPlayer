@@ -49,13 +49,6 @@ var APMPlayerTestSetup = (function () {
                 identifier: 'apm_audio:/minnesota/news/programs/midday_2/2012/01/02/midday_hour_2_20120102_64.mp3'
             };
         },
-        getCSFLiveAudioObj : function () {
-            return  {
-                title:'CSF live stream',
-                description: 'test description',
-                identifier: 'apm_live_audio:/csf'
-            }
-        },
         getKCMPLiveAudioObj : function () {
             return  {
                 title:'89.3 The Current',
@@ -158,30 +151,16 @@ var APMPlayerTestSetup = (function () {
                 },
                 apm_live_audio : {
                     mpr_news : {
-                        flash_server_url : 'rtmp://archivemedia.publicradio.org/news',
+                        flash_server_url : 'rtmp://wowza.stream.publicradio.org/news',
                         flash_file_path : 'news.stream',
-                        http_file_path : 'http://newsstream1.publicradio.org:80/',
+                        http_file_path : 'http://nis.stream.publicradio.org/nis.mp3',
                         buffer_time : 6,
                         type : 'live_audio'
                     },
                     mpr_current : {
-                        flash_server_url : 'rtmp://archivemedia.publicradio.org/kcmp',
+                        flash_server_url : 'rtmp://wowza.stream.publicradio.org/kcmp',
                         flash_file_path : 'kcmp.stream',
-                        http_file_path : 'http://currentstream1.publicradio.org:80/',
-                        buffer_time : 6,
-                        type : 'live_audio'
-                    },
-                    csf : {
-                        flash_server_url : 'rtmp://archivemedia.publicradio.org/csf',
-                        flash_file_path : 'csf.stream',
-                        http_file_path : 'http://204.93.222.85:80/csf-nopreroll',
-                        buffer_time : 6,
-                        type : 'live_audio'
-                    },
-                    wpbi : {
-                        flash_server_url : 'rtmp://archivemedia.publicradio.org/wpbistream',
-                        flash_file_path : 'wpbi.stream',
-                        http_file_path : 'http://wpbistream1.lbdns-streamguys.com:80/wpbistream',
+                        http_file_path : 'http://current.stream.publicradio.org/kcmp.mp3',
                         buffer_time : 6,
                         type : 'live_audio'
                     }
