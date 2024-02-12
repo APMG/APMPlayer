@@ -1,6 +1,8 @@
 APMPlayer
 =========
 
+**PLEASE NOTE: This library is deprecated and no longer supported.**
+
 A javascript media player framework developed to be a single, extensible media playback API for streaming and static audio content.
 
 Description
